@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body
+        {
+            background-color: rgb(42, 45, 243);
+            color: blanchedalmond;
+            font: Normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Iniciando estudos com o DOM
+    </h1>
+    <p>
+        Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    </p>
+    <div id = 'msg'>
+        Clique em mim
+    </div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0];// se usa [] para poder identificar o parágrafo que deseja na ordem imperativa
+       /*
+        window.document.write(p1.innerText);
+        var d =window.document.getElementById('msg');
+        d.style.background = 'green';
+        d.innerText = "Estou Aguardando...";
+        window.document.getElementById('msg').innerText = 'olá'; // Faz a mesma coisa do comando anterior
+        */
+        var d = window.document.querySelector('div#msg'); // id-> # // class-> .
+        d.style.background = 'blue';
+
+    </script>
+</body>
+</html>
