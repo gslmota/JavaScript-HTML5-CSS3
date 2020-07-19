@@ -7,3 +7,5 @@ function menorNumero(a, b){
 }
 
 // Programa principal
+var x = menorNumero(4,67)
+console.log(x)
