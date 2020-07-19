@@ -1,14 +1,6 @@
-function comecaComMaiuscula(palavra){
-    return /^[A-Z]/.test(palavra)
- }
-  
- var palavras = ["Amor", "copo", "Bolacha", "biscoito"];
-  
- // Seu código vem aqui embaixo.
- for(var i = 0; i<palavras.length;i++){
-     if(comecaComMaiuscula(palavras[i])){
-         console.log("Começa com maiúscula")
-     }else{
-         console.log("Não começa com maiúscula")
-     }
- }
+// Seu código vem aqui. Lembre-se: a função validaCPF já está definida.
+if(validaCPF(576.524.020-85)){
+    console.log("CPF válido")
+}else{
+    console.log("CPF inválido")
+}
