@@ -6,3 +6,6 @@ function maisBaratosQue(valor, precos) {
     return precos.filter(p => p >= valor);
  }
  
+ function precosEntre(valorMenor, valorMaior, precos){
+
+ }
