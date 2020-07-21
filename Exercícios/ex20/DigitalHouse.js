@@ -1,3 +1,6 @@
 function estavaPresenteNaAula(nomeDoAluno, nomesDosPresentes){
-   nomesDosPresentes
+  var c = nomesDosPresentes.indexOf(nomeDoAluno)
+  if(c == -1){
+     return false
+  } es
 }
