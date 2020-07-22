@@ -8,7 +8,7 @@ var moradores = [
    "Jedi do Lado Cinza da Força",
    "Baby Yoda Amarelo"
 ]
-   for(var i = 0; i<= 8;i++)
+   for(var i = 0; i<= 7;i++)
    {
       if(i%2==0){
          console.log("O morador " + moradores[i] + " pode usar o elevador")
