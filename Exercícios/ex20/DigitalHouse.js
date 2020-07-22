@@ -1,30 +1,57 @@
-/*Uma academia precisa separar grupos de pessoas tendo como base a sua altura para que dessa forma consiga formar grupos para as aulas de zumba. Temos um array que lista a altura de cada aluno da academia, e outros 3 arrays (Grupo A, B e C) que são classificados da seguinte forma: 
+/*Um estacionamento deseja automatizar a cobrança de mensalistas. Para isso decidiu simplificar a forma de calcular o valor devido pelo seu cliente. A quantia a ser paga pelos seus usuários depende do número de entradas que o veículo realiza no estacionamento. A cada entrada, a placa do veículo é registrada. Ao final do mês, conta-se o número de entradas que o veículo realizou e faz-se o seguinte cálculo:
 
 
-grupoA - Alunos com altura entre 150 a 159
+Se o motorista realizou até 20 entradas, ele deve pagar R$ 10,00 por entrada realizada.
 
 
+Da vigésima primeira entrada em diante, cada entrada custa R$ 5,00 ao cliente.
 
-grupoB - Alunos com altura entre 160 a 169
 
-grupoC - Alunos com altura de 1.70 ou mais
+	Agora, você deve ajudar na automatização da cobrança escrevendo duas funções.
 
-Seu trabalho é pegar cada valor do array alunos e colocar o valor correspondente em seu respectivo grupo. Para esse exercício, você precisará usar loops, condicionais e funções de arrays. */
 
-var alunos = [170, 159, 151, 187, 156, 191, 165, 154, 167, 169, 171, 170, 160]
+A primeira função se chama calcularNumeroDeEntradas(placa). Ela deve receber um único parâmetro que representa a placa de um carro. A função deve retornar o número de entradas que esse carro realizou no estacionamento. Em outras palavras, o número de vezes que a placa passada como parâmetro aparece no array placas.
 
-var grupoA = []
-var grupoB = []
-var grupoC = []
-for(var i=0;i<alunos.length;i++){
-   if(alunos[i]>=150 && alunos[i]<=159){
-      grupoA.push(alunos[i])
+
+A segunda função se chama calcularValorDevido(placa). Ela deve receber um único parâmetro que representa a placa de um carro. A função deve calcular o valor que o proprietário do carro tem que pagar segundo a política de preços estabelecida. Naturalmente, será necessário utilizar a primeira função dentro da segunda.*/
+
+// Esse array é utilizado dentro das funções. Cada placa neste array representa
+// uma entrada do respectivo veículo no estacionamento. Não é necessário alterar
+// esse array.
+var placas = [
+   'RXB-2525', 'AKX-3333', 'ORO-7142','RXB-2525', 'AKX-3333', 'ORO-7142',
+   'AKX-3333', 'RXB-2525', 'AKX-3333','AKX-3333', 'RXB-2525', 'AKX-3333',   'RXB-2525', 'AKX-3333', 'ORO-7142','AKX-3333', 'AKX-3333', 'RXB-2525',
+   'AKX-3333', 'ORO-7142', 'ORO-7142','AKX-3333', 'AKX-3333', 'RXB-2525',
+   'AKX-3333', 'AKX-3333', 'RXB-2525','AKX-3333', 'AKX-3333', 'RXB-2525',
+   'AKX-3333', 'ORO-7142', 'ORO-7142','AKX-3333', 'ORO-7142', 'ORO-7142',
+   'ORO-7142', 'RXB-2525', 'AKX-3333','AKX-3333', 'ORO-7142', 'ORO-7142',
+   'AKX-3333', 'RXB-2525', 'AKX-3333','AKX-3333', 'RXB-2525', 'AKX-3333',
+   'RXB-2525', 'AKX-3333', 'ORO-7142','AKX-3333', 'AKX-3333', 'RXB-2525',
+   'AKX-3333', 'ORO-7142', 'ORO-7142','AKX-3333', 'AKX-3333', 'RXB-2525',
+   'AKX-3333', 'AKX-3333', 'RXB-2525','AKX-3333', 'AKX-3333', 'RXB-2525'
+]
+
+function calcularNumeroDeEntradas(placa){
+   // Seu código vem aqui...
+   var cont= 0
+   for(var i = 0;i<placas.length;i++){
+      if(placas[i] == placa){
+         cont += 1
+      }
    }
-   else if(alunos[i]>=160 && alunos[i]<=169){
-      grupoB.push(alunos[i])
+   return cont
+}
+ 
+function calcularValorDevido(placa){
+   // Seu código vem aqui...
+   var tot = calcularNumeroDeEntradas(placa)
+   var total = 0
+   if(tot<=20){
+      total = 200
    }
    else{
-      grupoC.push(alunos[i])
-
+      total = 200+(tot - 20)*5
    }
+   return total
 }
+
