@@ -1,57 +1,30 @@
-/*Um estacionamento deseja automatizar a cobrança de mensalistas. Para isso decidiu simplificar a forma de calcular o valor devido pelo seu cliente. A quantia a ser paga pelos seus usuários depende do número de entradas que o veículo realiza no estacionamento. A cada entrada, a placa do veículo é registrada. Ao final do mês, conta-se o número de entradas que o veículo realizou e faz-se o seguinte cálculo:
+/*Em um site sobre cinema, os visitantes cadastrados podem dar notas de 0 a 5 para um filme que ele tenha assistido. Cada filme tem um grande array de notas atribuídas pelos visitantes. Contudo, além de dar notas para os filmes, os visitantes querem ver o que as outras pessoas acharam do filme! É aí que você entra com seu código:
 
+Escreva uma função calculaGostos(notas)
 
-Se o motorista realizou até 20 entradas, ele deve pagar R$ 10,00 por entrada realizada.
+Essa função deve ser escrita para receber somente um parâmetro: um array de notas. Ela deve retornar também um array com três elementos:
 
+O primeiro, com a quantidade de notas iguais a 0 ou 1. Seriam os que não gostaram do filme
 
-Da vigésima primeira entrada em diante, cada entrada custa R$ 5,00 ao cliente.
+O segundo, com a quantidade de notas iguais a 2 ou 3. Seriam os que acharam o filme mediano
 
+O terceiro, com a quantidade de notas iguais a 4 ou 5. Seriam os que gostaram do filme.*/
 
-	Agora, você deve ajudar na automatização da cobrança escrevendo duas funções.
-
-
-A primeira função se chama calcularNumeroDeEntradas(placa). Ela deve receber um único parâmetro que representa a placa de um carro. A função deve retornar o número de entradas que esse carro realizou no estacionamento. Em outras palavras, o número de vezes que a placa passada como parâmetro aparece no array placas.
-
-
-A segunda função se chama calcularValorDevido(placa). Ela deve receber um único parâmetro que representa a placa de um carro. A função deve calcular o valor que o proprietário do carro tem que pagar segundo a política de preços estabelecida. Naturalmente, será necessário utilizar a primeira função dentro da segunda.*/
-
-// Esse array é utilizado dentro das funções. Cada placa neste array representa
-// uma entrada do respectivo veículo no estacionamento. Não é necessário alterar
-// esse array.
-var placas = [
-   'RXB-2525', 'AKX-3333', 'ORO-7142','RXB-2525', 'AKX-3333', 'ORO-7142',
-   'AKX-3333', 'RXB-2525', 'AKX-3333','AKX-3333', 'RXB-2525', 'AKX-3333',   'RXB-2525', 'AKX-3333', 'ORO-7142','AKX-3333', 'AKX-3333', 'RXB-2525',
-   'AKX-3333', 'ORO-7142', 'ORO-7142','AKX-3333', 'AKX-3333', 'RXB-2525',
-   'AKX-3333', 'AKX-3333', 'RXB-2525','AKX-3333', 'AKX-3333', 'RXB-2525',
-   'AKX-3333', 'ORO-7142', 'ORO-7142','AKX-3333', 'ORO-7142', 'ORO-7142',
-   'ORO-7142', 'RXB-2525', 'AKX-3333','AKX-3333', 'ORO-7142', 'ORO-7142',
-   'AKX-3333', 'RXB-2525', 'AKX-3333','AKX-3333', 'RXB-2525', 'AKX-3333',
-   'RXB-2525', 'AKX-3333', 'ORO-7142','AKX-3333', 'AKX-3333', 'RXB-2525',
-   'AKX-3333', 'ORO-7142', 'ORO-7142','AKX-3333', 'AKX-3333', 'RXB-2525',
-   'AKX-3333', 'AKX-3333', 'RXB-2525','AKX-3333', 'AKX-3333', 'RXB-2525'
-]
-
-function calcularNumeroDeEntradas(placa){
-   // Seu código vem aqui...
-   var cont= 0
-   for(var i = 0;i<placas.length;i++){
-      if(placas[i] == placa){
-         cont += 1
+function calculaGostos(notas){
+   arrf = []
+   var ngf = 0
+   var fm = 0
+   var gf = 0
+   for(var i =0;i<notas.length;i++){
+      if(notas[i] == 0 || notas[i] == 1){
+         ngf += 1
+      }
+      else if(notas[i] == 2 || notas[i] == 3){
+         fm += 1
+      }
+      else if(notas[i] == 4 || notas[i] == 5){
+         gf += 1
       }
    }
-   return cont
+   return arrf[ngf, fm, gf]
 }
- 
-function calcularValorDevido(placa){
-   // Seu código vem aqui...
-   var tot = calcularNumeroDeEntradas(placa)
-   var total = 0
-   if(tot<=20){
-      total = 200
-   }
-   else{
-      total = 200+(tot - 20)*5
-   }
-   return total
-}
-
