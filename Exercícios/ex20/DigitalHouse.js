@@ -1,21 +1,2 @@
-/*Programe uma função maiorQueNum que busca em um dado array apenas os números maiores do que o número fornecido no segundo parâmetro da função e retorne um novo array apenas com esses números.
+Programe uma função buscarDivisivelPor que recebe dois parâmetros, um array de números e um número de teste, retornando como resposta o primeiro número do array que seja divisível pelo número dado e diferente de zero. Caso nenhum número do array passe no teste, retorne o texto "Nenhum número válido encontrado!".
 
-
-
-Exemplo:
-
-
-
-numeros = [10, 4, 7, 128, 42, -1, 0, 300, -5]
-num = 5
-
-maiorQueNum(numeros, num); // retorna [10, 7, 128, 42, 300]*/
-
-function maiorQueNum(array, num)
-{
-  // Escreva abaixo o seu código:
-  for(var i = 0; i<array.lenght; i++){
-     
-  }
-
-}
