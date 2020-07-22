@@ -1,6 +1,7 @@
 function transformaParaMaiusculo(arrayPalavras){
+   var array = []
    for(var i = 0;i<=arrayPalavras.length;i++){
-     arrayPalavras[i].toUpperCase()
+      array.push(arrayPalavras[i])
    }
-   return arrayPalavras
+   return array
 }
