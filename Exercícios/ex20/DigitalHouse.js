@@ -1,6 +1,7 @@
-function transformaParaMaiusculo(arrayPalavras){
-   for(var i = 0;i<=arrayPalavras.length;i++){
-     arrayPalavras[i].toUpperCase()
+function gerarDezenas(){
+   var ms = []
+   for(var i = 1; i<=6;i++){
+      ms[i] =Math.round(Math.random() * 60)
    }
-   return arrayPalavras
+   return ms
 }
