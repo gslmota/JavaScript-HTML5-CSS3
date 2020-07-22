@@ -1,33 +1,48 @@
-/*Programar uma função filme que recebe três arrays com os nomes de personagens, filmes e ano de estréia no cinema. A função deve receber também um valor de id escolhido pelo usuário com intervalo de 1 até o tamanho máximo dos arrays fornecidos e retornar uma frase com o seguinte modelo: "personagem é um personagem do filme filme que estreou no cinema em lançamento." Se o valor de id for inválido, a função deve retornar a frase "Essa não é uma opção válida."
+/*Programe uma função series que recebe dois parâmetros, um prefixo com o nome da série e um array com a lista de todos os episódios da série. A função deve retornar um novo array com a lista de episódios iniciando com o nome da série.
 
 
 
-Exemplo:
+Exemplo: Dadas as variáveis abaixo:
+
+harryPotterPrefixo = "Harry Potter";
+harryPotterSeries = [
+  "e a Pedra Filosofal",
+  "e a Câmara Secreta",
+  "e o Prisioneiro de Azkaban",
+  "e o Cálice de Fogo",
+  "e a Ordem da Fênix",
+  "e o Enigma do Príncipe",
+  "e as Relíquias da Morte"
+];
 
 
+A função deve retornar como resultado o seguinte array:
 
-personagens = ["Hermione", "Trinity", "Leia"]
-filmes = ["Harry Potter", "Matrix", "Star wars"]
-lancamentos = [2001, 1999, 1977]
-id = 3
+resultado = [
+  "Harry Potter e a Pedra Filosofal",
+  "Harry Potter e a Câmara Secreta",
+  "Harry Potter e o Prisioneiro de Azkaban",
+  "Harry Potter e o Cálice de Fogo",
+  "Harry Potter e a Ordem da Fênix",
+  "Harry Potter e o Enigma do Príncipe",
+  "Harry Potter e as Relíquias da Morte"
+];*/
 
-filme(personagens, filmes, lancamentos, id)  
-// retorna a string "Leia é um personagem do filme Star wars que estreou no cinema em 1977."
-
-
-
-
-*/
-
-function filme(personagens, filmes, lancamentos, id){
-   if(id > 3 || id <1){
-      return "Essa não é uma opção válida."
-   }
-   else{
-      var a = personagens[id - 1] + " é um personagem do filme " + filmes[id-1] + " que estreou no cinema em " + lancamentos[id-1] + "."
-      return a
-   }
+function series(prefixo, array)
+{
+    // Escreve sua função abaixo:
+    var resultado = []
+    for(var i=0;i<array.length;i++){
+       resultado[i] = prefixo + " " + array[i]
+    }
+    return resultado
 }
-
-
-console.log(filme(["Hermione", "Trinity", "Leia"],["Harry Potter", "Matrix", "Star wars"],[2001, 1999, 1977],1))
+console.log(series("Harry Potter", [
+   "e a Pedra Filosofal",
+   "e a Câmara Secreta",
+   "e o Prisioneiro de Azkaban",
+   "e o Cálice de Fogo",
+   "e a Ordem da Fênix",
+   "e o Enigma do Príncipe",
+   "e as Relíquias da Morte"
+ ]))
