@@ -6,9 +6,7 @@ function transformaParaMaiusculo(arrayPalavras){
     array.push(c[i])
    }
    array.pop()
-   for(var i = 0;i<=c.length;i++){
-      array[i].toUpperCase()
-   }
+   toUpperCase(array)
    return array
 }
 console.log(transformaParaMaiusculo(["gato","cachorro","tartaruga"]))
