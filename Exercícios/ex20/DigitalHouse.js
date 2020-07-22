@@ -26,5 +26,8 @@ function calculaGostos(notas){
          gf += 1
       }
    }
-   return arrf[ngf, fm, gf]
+   arrf = [ngf, fm, gf]
+   return arrf
 }
+
+console.log(calculaGostos([1,1,3,3,5,5]))
