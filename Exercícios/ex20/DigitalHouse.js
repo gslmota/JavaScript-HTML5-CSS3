@@ -1,11 +1,17 @@
-function transformaParaMaiusculo(arrayPalavras){
-   var array = []
-   var c = []
-   c = arrayPalavras
-   for(var i = 0;i<=c.length;i++){
-    array.push(c[i])
+var moradores = [
+   "Fulano de Tal",
+   "Beltrano da Cia",
+   "Viajante do Tempo",
+   "Morador da Lua",
+   "Marciano Azul",
+   "Et da Eslováquia",
+   "Jedi do Lado Cinza da Força",
+   "Baby Yoda Amarelo"
+]
+   for(var i = 0; i<= 8;i++)
+   {
+      if(i%2==0){
+         console.log("O morador " + moradores[i] + " pode usar o elevador")
+      }
    }
-   array.pop()
-   return array
-}
-console.log(transformaParaMaiusculo(["gato","cachorro","tartaruga"]))
+
