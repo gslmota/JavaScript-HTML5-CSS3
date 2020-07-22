@@ -1,48 +1,21 @@
-/*Programe uma função series que recebe dois parâmetros, um prefixo com o nome da série e um array com a lista de todos os episódios da série. A função deve retornar um novo array com a lista de episódios iniciando com o nome da série.
+/*Programe uma função maiorQueNum que busca em um dado array apenas os números maiores do que o número fornecido no segundo parâmetro da função e retorne um novo array apenas com esses números.
 
 
 
-Exemplo: Dadas as variáveis abaixo:
-
-harryPotterPrefixo = "Harry Potter";
-harryPotterSeries = [
-  "e a Pedra Filosofal",
-  "e a Câmara Secreta",
-  "e o Prisioneiro de Azkaban",
-  "e o Cálice de Fogo",
-  "e a Ordem da Fênix",
-  "e o Enigma do Príncipe",
-  "e as Relíquias da Morte"
-];
+Exemplo:
 
 
-A função deve retornar como resultado o seguinte array:
 
-resultado = [
-  "Harry Potter e a Pedra Filosofal",
-  "Harry Potter e a Câmara Secreta",
-  "Harry Potter e o Prisioneiro de Azkaban",
-  "Harry Potter e o Cálice de Fogo",
-  "Harry Potter e a Ordem da Fênix",
-  "Harry Potter e o Enigma do Príncipe",
-  "Harry Potter e as Relíquias da Morte"
-];*/
+numeros = [10, 4, 7, 128, 42, -1, 0, 300, -5]
+num = 5
 
-function series(prefixo, array)
+maiorQueNum(numeros, num); // retorna [10, 7, 128, 42, 300]*/
+
+function maiorQueNum(array, num)
 {
-    // Escreve sua função abaixo:
-    var resultado = []
-    for(var i=0;i<array.length;i++){
-       resultado[i] = prefixo + " " + array[i]
-    }
-    return resultado
+  // Escreva abaixo o seu código:
+  for(var i = 0; i<array.lenght; i++){
+     
+  }
+
 }
-console.log(series("Harry Potter", [
-   "e a Pedra Filosofal",
-   "e a Câmara Secreta",
-   "e o Prisioneiro de Azkaban",
-   "e o Cálice de Fogo",
-   "e a Ordem da Fênix",
-   "e o Enigma do Príncipe",
-   "e as Relíquias da Morte"
- ]))
