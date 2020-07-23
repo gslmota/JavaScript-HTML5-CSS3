@@ -1,16 +1,6 @@
-/*Programe uma função buscarDivisivelPor que recebe dois parâmetros, um array de números e um número de teste, retornando como resposta o primeiro número do array que seja divisível pelo número dado e diferente de zero. Caso nenhum número do array passe no teste, retorne o texto "Nenhum número válido encontrado!".
+/*Crie uma função que receba dois valores, o primeiro será uma palavra qualquer, e o segundo será a quantidade de vezes que o sistema irá imprimir essa palavra.
+
 */
-
-function buscarDivisivelPor(array, num)
-{
-for (var i = 0; i < array.length; i++)
-{
-if ((array[i] % num ) == 0 && array[i] != 0)
-{
-return array[i]
+function repete(valor,qtd){
+ 
 }
-}
-return resp = "Nenhum número válido encontrado!"
-}
-
-console.log(buscarDivisivelPor([0, 9, 4, 7, 128, 42, -1, 301, -5], 2))
