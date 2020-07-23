@@ -2,5 +2,8 @@
 
 */
 function repete(valor,qtd){
- 
+var a = valor + ' '
+console.log(a.repeat(qtd))
 }
+
+repete("garbeil", 5)
